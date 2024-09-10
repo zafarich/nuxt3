@@ -8,9 +8,8 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "lint": "yarn lint:eslint && yarn lint:prettier",
+    "lint": "bun run lint:eslint",
     "lint:eslint": "eslint .",
-    "lint:prettier": "prettier . --check",
     "lintfix": "eslint . --fix && prettier --write --list-different .",
     "prepare": "husky"
   },
@@ -24,6 +23,7 @@
   "devDependencies": {
     "eslint": "^9.10.0",
     "husky": "^9.1.5",
+    "prettier": "^3.3.3",
     "typescript": "^5.6.2"
   }
 }
