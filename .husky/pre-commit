@@ -1,1 +1,3 @@
-bun
+# Pre-commit hook to run ESLint
+bun run lintfix
+# Add additional rules in your ESLint configuration file

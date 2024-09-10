@@ -6,7 +6,6 @@ export default defineNuxtPlugin((nuxtApp) => {
     onRequest({options}) {
       if (session.value?.token) {
         const headers = (options.headers ||= {});
-        const aaa = 3;
         if (Array.isArray(headers)) {
           headers.push(["Authorization", `Bearer ${session.value?.token}`]);
         } else if (headers instanceof Headers) {
