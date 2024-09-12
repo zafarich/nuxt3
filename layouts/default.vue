@@ -6,8 +6,6 @@
   </div>
 </template>
 
-<script setup lang="ts">
-const message = ref("sdf");
-
-console.log(message.value);
+<script lang="ts" setup>
+const message2 = ref(null);
 </script>
