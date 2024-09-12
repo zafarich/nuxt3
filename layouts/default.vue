@@ -6,7 +6,4 @@
   </div>
 </template>
 
-<script lang="ts" setup>
-const message2 = ref(null);
-const test_const = "test";
-</script>
+<script lang="ts" setup></script>
