@@ -1,3 +1,8 @@
 export default defineAppConfig({
-  foo: "bar",
+  nuxtQuasar: {
+    brand: {
+      primary: '#fbc100',
+      secondary: '#eeeeee',
+    },
+  },
 });

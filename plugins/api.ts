@@ -2,16 +2,17 @@ export default defineNuxtPlugin((nuxtApp) => {
   const {session} = useUserSession();
 
   const api = $fetch.create({
-    baseURL: "https://api.nuxt.com",
+    baseURL: "https://qa-gateway.tms.uz/api",
     onRequest({options}) {
-      if (session.value?.token) {
+      const token = session.value?.token;
+      if (token) {
         const headers = (options.headers ||= {});
         if (Array.isArray(headers)) {
-          headers.push(["Authorization", `Bearer ${session.value?.token}`]);
+          headers.push(["Authorization", `Bearer ${token}`]);
         } else if (headers instanceof Headers) {
-          headers.set("Authorization", `Bearer ${session.value?.token}`);
+          headers.set("Authorization", `Bearer ${token}`);
         } else {
-          headers.Authorization = `Bearer ${session.value?.token}`;
+          headers.Authorization = `Bearer ${token}`;
         }
       }
     },
