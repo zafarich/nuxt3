@@ -1,6 +1,6 @@
 export const useUserSession = () => {
   const session = ref({
-    token: "",
+    token: '',
   });
 
   return {

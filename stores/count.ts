@@ -1,12 +1,12 @@
 export const useCountStore = defineStore(
-  "count",
+  'count',
   () => {
     const count = ref(1);
 
     function increment() {
       count.value++;
     }
-    return {count, increment};
+    return { count, increment };
   },
   {
     persist: true,
