@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import type { Product } from '@/types/product.type';
-const productStore = useProductStore();
+const { getById } = useProductStore();
 
-const product = ref<Product | null>(null);
+const product = ref(null);
 
 async function getProduct() {
-  const res = (await productStore.getById(87920)) as Product;
-  product.value = res;
+  const res = await getById(87920);
+  product.value = res as Product;
 }
 </script>
 
